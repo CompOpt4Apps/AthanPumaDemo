@@ -1,4 +1,4 @@
-# AthanPumaDemo
+# Puma Demo
 
 ## What is HPC?
 High-performance computiong (HPC) is the use of software and hardware to process data and perform complex calculations at high speeds. Supercomputers are the product of this innovation.
@@ -75,6 +75,9 @@ The first portion of your script tells the system the resources you’d like to 
 
 The second section tells the system exactly how to do your work. These are all the commands (e.g. loading modules, changing directories, etc) that you would execute **in your current environment** to run your script successfully. SLURM, by default, inherits the working environment present at the time of job submission. This behavior may be modified with additional SLURM directives.
 
+![SLURM File](/images/slurm.png)
+Format: ![Alt Text](url)
+
 Submit your job:
 
 ```$ sbatch <your_script>.slurm```
@@ -84,5 +87,11 @@ The output of this command gives you the **job ID**. With it you can track the s
 ```$ squeue --job <job_id>```
 
 A status of ```PD``` says the job is pending. ```R``` indicates the job is running. When the job is finished you will not see any information regarding the job.
+
+![Pending SLURM Job](/images/pending.png)
+Format: ![Alt Text](url)
+
+![Finished SLURM Job](/images/finished.png)
+Format: ![Alt Text](url)
 
 SLURM provides the output file of the job in the format ```<job_name>-<job_id>.out```
