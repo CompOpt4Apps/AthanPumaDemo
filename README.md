@@ -1,18 +1,18 @@
 # Puma Demo
 
 ## Index
-* [What is HPC?](#what-is-hpc?)
-* [What is Puma?](#what-is-puma?)
+* [What is HPC?](#what-is-hpc)
+* [What is Puma?](#what-is-puma)
 * [Access HPC Systems](#access-hpc-systems)
 * [Access Puma](#access-puma)
 * [Access Software on Puma](#access-software-on-puma)
 * [Run Scripts on](#run-scripts-on-puma)
 * [Demo](#demo)
 
-## What is HPC?
+## What is HPC
 High-performance computiong (HPC) is the use of software and hardware to process data and perform complex calculations at high speeds. Supercomputers are the product of this innovation.
 
-## What is Puma?
+## What is Puma
 Released in mid 2020, Puma is the newest supercomputer at the University of Arizona. The system is availiable to all researchers at no cost.
 
 ## Access HPC Systems
