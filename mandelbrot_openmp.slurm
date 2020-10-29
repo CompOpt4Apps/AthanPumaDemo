@@ -7,7 +7,7 @@
 #SBATCH --job-name=mandelbrot_openmp
 ### Optional. Set the output filename.
 ### SLURM reads %x as the job name and %j as the job ID
-#SBATCH --output=%x-%j.ppm
+#SBATCH --output=%x-%j.out
 ### REQUIRED. Specify the PI group for this job
 #SBATCH --account=mstrout
 ### Optional. Request email when job begins and ends
