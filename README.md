@@ -128,11 +128,11 @@ EDIT SLURM TO INCLUDE NEEDED MODULES
 
 Load any necessary modules:
 
-```module load <software/version>```
+```$ module load <software/version>```
 
 Finally, submit the SLURM job:
 
-```sbatch mandelbrot_openmp.slurm```
+```$ sbatch mandelbrot_openmp.slurm```
 
 You will see a **.ppm** file, the output of the SLURM job. This file gives us the Mandelbrot set. When opened with an application that accepts .ppm files such as GIMP, an image of the set will appear.
 
