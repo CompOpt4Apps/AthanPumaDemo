@@ -27,9 +27,12 @@
 ### PART 2: Execute bash commands to run your job
 # --------------------------------------------------------------
 
-### Change the next line to the location of AthanPumaDemo
+### Load modules
+module load openmpi3
+### Change directory to this demo
 cd ~/demo/AthanPumaDemo
-### Run your work
+### Build the demo
 bash mandelbrot_openmp.sh
-
+### Run the demo
 ./a.out
+sleep 10
