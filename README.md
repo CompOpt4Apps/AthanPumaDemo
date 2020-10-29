@@ -39,7 +39,7 @@ You can view the your sponsor groups used and remaining hours by using the comma
 
 ```$ va```
 
-![SLURM File](/images/va.png)
+![va File](/images/va.png)
 
 ## Access Software on Puma
 To start, request an **interactive session** for one hour:
@@ -61,6 +61,8 @@ Get a look at the available built in modules:
 ```$ module avail```
 
 You'll see which modules are loaded into your system indicated by the ```(L)``` to the right of the listed modules. More specifically you may view a list of all loaded modules using ```$ module list```
+
+![module File](/images/modules.png)
 
 Load a module:
 
@@ -91,15 +93,21 @@ Submit your SLURM job:
 
 ```$ sbatch <your_SLURM_script>.slurm```
 
-The output of this command gives you the **job ID**. With it you can track the status of the job:
+The output of this command gives you the **job ID**.
+
+![submit File](/images/submit.png)
+
+With the job ID you can track the status of the job:
 
 ```$ squeue --job <job_id>```
 
 A status of ```PD``` means the job is pending. ```R``` indicates the job is running. When the job is finished you will not see any information regarding the job.
 
-![Pending SLURM Job](/images/pending.png)
+![pending File](/images/pending.png)
 
-![Finished SLURM Job](/images/finished.png)
+![running File](/images/running.png)
+
+![finished File](/images/finished.png)
 
 SLURM provides the output file of the job in the format ```<job_name>-<job_id>.out``` or however you defined the the output file in the line ```# SBATCH --output=<output_file_format>``` from your SLURM script.
 
