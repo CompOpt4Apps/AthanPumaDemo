@@ -27,6 +27,7 @@
 ### PART 2: Execute bash commands to run your job
 # --------------------------------------------------------------
 
+### Change the next line to the location of AthanPumaDemo
 cd ~/demo/AthanPumaDemo
 ### Run your work
 bash mandelbrot_openmp.sh
