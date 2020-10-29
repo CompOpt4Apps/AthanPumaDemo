@@ -1,8 +1,8 @@
 # Puma Demo
 
 ## Index
-* [What is HPC?](#what-is-hpc)
-* [What is Puma?](#what-is-puma)
+* [What is HPC](#what-is-hpc)
+* [What is Puma](#what-is-puma)
 * [Access HPC Systems](#access-hpc-systems)
 * [Access Puma](#access-puma)
 * [Access Software on Puma](#access-software-on-puma)
