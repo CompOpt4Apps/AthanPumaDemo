@@ -109,6 +109,7 @@ Now that we understand basic HPC and Puma operations let's do a quick demo calcu
 First, access the University of Arizona's bastion login node:
 
 ```$ ssh <netid>@hpc.arizona.edu```
+
 Once there is a connection open Puma:
 
 ```$ puma```
