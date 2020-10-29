@@ -33,6 +33,8 @@ The purpose of a Puma login node is for users to perform housekeeping work, edit
 
 **This is not where scripts are run**. To learn more about executing scripts look [here](#run-scripts-on-puma)
 
+To move files between your local machine and Puma I suggest either creating a GitHub repositiory to push and pull files or use ```scp <netid>@filexfer.hpc.arizona.edu:<path_to_file_on_puma> <path_to_destination_on_local>``` to move files from Puma onto your local or ```scp <path_to_file_on_local> <netid>@filexfer.hpc.arizona.edu:<path_to_destination_on_puma>``` to move files from local to Puma.
+
 Now that your account is associoated with a sponsor group, you are granted access to the resources of that group. Each group has a monthly allocation of 70000 standard CPU hours on Puma and when you run a job, the hours used are deducted from your group’s account. For example, if you run a job for one hour using 5 CPUs, 5 CPU hours will be charged.
 
 You can view the your sponsor groups used and remaining hours by using the command:
