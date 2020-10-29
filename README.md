@@ -107,20 +107,30 @@ SLURM provides the output file of the job in the format ```<job_name>-<job_id>.o
 Now that we understand basic HPC and Puma operations let's do a quick demo calculating the Mandelbrot set.
 
 First, access the University of Arizona's bastion login node:
+
 ```$ ssh <netid>@hpc.arizona.edu```
 Once there is a connection open Puma:
+
 ```$ puma```
+
 Clone this repository into the directory that best suits you:
+
 ```$ git clone https://github.com/CompOpt4Apps/AthanPumaDemo.git```
+
 Open mandelbrot_openmp.slurm in an editor and change the line ```cd ~/demo/AthanPumaDemo``` by giving the absolute path to **AthanPumaDemo** on your machine ```cd <path>/AthanPumaDemo```
+
 Request an interactive session using a compute node:
+
 ```$ interactive```
 
 EDIT SLURM TO INCLUDE NEEDED MODULES
+
 Load any necessary modules:
+
 ```module load <software/version>```
 
 Finally, submit the SLURM job:
+
 ```sbatch mandelbrot_openmp.slurm```
 
 You will see a **.ppm** file, the output of the SLURM job. This file gives us the Mandelbrot set. When opened with an application that accepts .ppm files such as GIMP, an image of the set will appear.
