@@ -6,7 +6,7 @@
 * [Access HPC Systems](#access-hpc-systems)
 * [Access Puma](#access-puma)
 * [Access Software on Puma](#access-software-on-puma)
-* [Run Scripts on](#run-scripts-on-puma)
+* [Run Scripts on Puma](#run-scripts-on-puma)
 * [Demo](#demo)
 
 ## What is HPC
