@@ -33,7 +33,10 @@ The purpose of a Puma login node is for users to perform housekeeping work, edit
 
 **This is not where scripts are run**. To learn more about executing scripts look [here](#run-scripts-on-puma)
 
-To move files between your local machine and Puma I suggest either creating a GitHub repositiory to push and pull files or use ```scp <netid>@filexfer.hpc.arizona.edu:<path_to_file_on_puma> <path_to_destination_on_local>``` to move files from Puma onto your local or ```scp <path_to_file_on_local> <netid>@filexfer.hpc.arizona.edu:<path_to_destination_on_puma>``` to move files from local to Puma.
+To **move files** between your local machine and Puma I you can:
+* Create a **GitHub** repositiory to push and pull files
+* Move files from **local-->HPC** using  ```$ scp -rp filenameordirectory NetId@filexfer.hpc.arizona.edu:subdirectory``` 
+* Move files from **HPC-->local** ```$ scp -rp NetId@filexfer.hpc.arizona.edu:filenameordirectory .```
 
 Now that your account is associoated with a sponsor group, you are granted access to the resources of that group. Each group has a monthly allocation of 70000 standard CPU hours on Puma and when you run a job, the hours used are deducted from your group’s account. For example, if you run a job for one hour using 5 CPUs, 5 CPU hours will be charged.
 
@@ -130,17 +133,7 @@ Clone this repository into the directory that best suits you:
 
 Open mandelbrot_openmp.slurm in an editor and change the line ```cd ~/demo/AthanPumaDemo``` by giving the absolute path to **AthanPumaDemo** on your machine ```cd <path>/AthanPumaDemo```
 
-Request an interactive session using a compute node:
-
-```$ interactive```
-
-EDIT SLURM TO INCLUDE NEEDED MODULES
-
-Load any necessary modules:
-
-```$ module load <software/version>```
-
-Finally, submit the SLURM job:
+Submit the SLURM job:
 
 ```$ sbatch mandelbrot_openmp.slurm```
 
