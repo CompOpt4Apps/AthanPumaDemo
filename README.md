@@ -10,10 +10,10 @@
 * [Demo](#demo)
 
 ## What is HPC
-High-performance computiong (HPC) is the use of software and hardware to process data and perform complex calculations at high speeds. Supercomputers are the product of this innovation.
+High-performance computing (HPC) is the use of software and hardware to process data and perform complex calculations at high speeds. Supercomputers are the product of this innovation.
 
 ## What is Puma
-Released in mid 2020, Puma is the newest supercomputer at the University of Arizona. The system is availiable to all researchers at no cost.
+Released in mid 2020, Puma is the newest supercomputer at the University of Arizona. The system is available to all researchers at no cost.
 
 ## Access HPC Systems
 You must:
@@ -34,13 +34,13 @@ The purpose of a Puma login node is for users to perform housekeeping work, edit
 **This is not where scripts are run**. To learn more about executing scripts look [here](#run-scripts-on-puma)
 
 To **move files** between your local machine and Puma I you can:
-* Create a **GitHub** repositiory to push and pull files
+* Create a **GitHub** repository to push and pull files
 * Move files from **local-->HPC** using  ```$ scp -rp filenameordirectory NetId@filexfer.hpc.arizona.edu:subdirectory``` 
 * Move files from **HPC-->local** ```$ scp -rp NetId@filexfer.hpc.arizona.edu:filenameordirectory .```
 
-Now that your account is associoated with a sponsor group, you are granted access to the resources of that group. Each group has a monthly allocation of 70000 standard CPU hours on Puma and when you run a job, the hours used are deducted from your group’s account. For example, if you run a job for one hour using 5 CPUs, 5 CPU hours will be charged.
+Now that your account is associated with a sponsor group, you are granted access to the resources of that group. Each group has a monthly allocation of 70000 standard CPU hours on Puma and when you run a job, the hours used are deducted from your group’s account. For example, if you run a job for one hour using 5 CPUs, 5 CPU hours will be charged.
 
-You can view the your sponsor groups used and remaining hours by using the command:
+You can view your sponsor groups used and remaining hours by using the command:
 
 ```$ va```
 
@@ -73,7 +73,7 @@ Load a module:
 
 ```$ module load <software/version>```
 
-If you choose not to specify the version then the lastest version of the defined software will usually be loaded.
+If you choose not to specify the version, then the latest version of the defined software will usually be loaded.
 
 To swap a version of a software with another version use:
 
@@ -86,11 +86,11 @@ SLURM is a scheduler software that will reserve resources and run work on the cl
 
 To run a slurm job a .slurm file must be created blueprinting how to run your code.
 
-This .slurm file is spearated into two parts, **resource requests** and **job instructions**.
+This .slurm file is separated into two parts, **resource requests** and **job instructions**.
 
 The first portion of your script tells the system the resources you’d like to reserve. This includes the number of **nodes/cores** you need, the **time** it will take to run your job, the **memory** required, your **group's name**, the **partition**, and any special instructions. Other optional job specifications may also be set such as a **job name** or requesting **email notifications**. Each line with one of these requests will start with **#SBATCH**. If you’d like to comment out optional specifications that you don’t want, change these to **### SBATCH**. You may also delete them.
 
-The second section tells the system exactly how to do your work. These are all the commands (e.g. loading modules, changing directories, etc) that you would execute **in your current environment** to run your script successfully. SLURM, by default, inherits the working environment present at the time of job submission. This behavior may be modified with additional SLURM directives.
+The second section tells the system exactly how to do your work. These are all the commands (e.g. loading modules, changing directories, etc) that you would execute **in your current environment** to run your script successfully. SLURM, by default, inherits the working environment present at the time of job submission. This behavior may be modified with additional SLURM directives. [1]
 
 ![SLURM File](/images/slurm.png)
 
@@ -114,7 +114,7 @@ A status of ```PD``` means the job is pending. ```R``` indicates the job is runn
 
 ![finished File](/images/finished.png)
 
-SLURM provides the output file of the job in the format ```<job_name>-<job_id>.out``` or however you defined the the output file in the line ```# SBATCH --output=<output_file_format>``` from your SLURM script.
+SLURM provides the output file of the job in the format ```<job_name>-<job_id>.out``` or however you defined the output file in the line ```# SBATCH --output=<output_file_format>``` from your SLURM script. This output file will capture all standard out and standard error messages printed from the executables.
 
 ## Demo
 Now that we understand basic HPC and Puma operations let's do a quick demo calculating the Mandelbrot set.
@@ -138,4 +138,7 @@ Submit the SLURM job:
 ```$ sbatch mandelbrot_openmp.slurm```
 
 You will see a **.ppm** file, the output of the SLURM job. This file gives us the Mandelbrot set. When opened with an application that accepts .ppm files such as GIMP, an image of the set will appear.
+
+## References
+* Ref 1: [University of Arizona's HPC Documentation Puma Quick Start](https://public.confluence.arizona.edu/display/UAHPC/Puma+Quick+Start)
 
